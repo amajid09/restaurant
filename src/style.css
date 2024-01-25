@@ -1,3 +1,9 @@
+:root {
+    --primary: #F0F8FF;
+    --font-color-primary: black;
+    --secondary: #676986;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -6,7 +12,6 @@ body{
 .content{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 .navbar ul{
     display: flex;
@@ -64,7 +69,7 @@ body{
     width: 75%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+    grid-template-columns: 1fr repeat(2, 2fr) 2fr;
 }
 
 .first-container{
@@ -73,7 +78,7 @@ body{
 }
 .second-container{
     
-    grid-column:3/5;
+    grid-column:3/6;
     grid-row: 2/3;
 }
 
@@ -88,4 +93,167 @@ body{
 .first-circle:hover + .first-text, .second-circle:hover + .second-text{
     visibility: visible;
     opacity: 1;
+}
+/****Menu page*****/
+.body{
+    width: 100%;
+    position: relative;
+}
+
+.body{
+    display: grid;
+    grid-template-rows: 3fr 2fr 1fr;
+    gap: 50px;
+}
+
+
+.top-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-picture, .menu-description{
+    height: 100%; 
+    width: 40%;
+}
+.menu-description{
+    background-color: var(--secondary);
+    color: white;
+}
+.text-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.descri{
+    width: 30rem; 
+}
+
+.menu-description p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.menu-description h2{
+    text-align: center;
+    font-size:45px;
+}
+.menu-picture{
+    background-image: url('./assets/image-1.png');
+    background-size: cover;
+    background-position: center center;
+    height: 40rem
+}
+.add-menu-wrapper{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.add-menu{
+    background-color: var(--font-color-primary);
+    padding: 10px 0;
+    width: 50%;
+}
+
+.slider{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.images{
+    height: 70%;
+    background-color: var(--primary); 
+    flex: 1;
+}
+.images:nth-child(1) {
+    background-image: url('./assets/image-1.png');
+    background-size: cover;
+}
+.images{
+    padding: 3rem 0;
+    background-position: center center;
+}
+.images:nth-child(2) {
+    background-image: url('./assets/image-3.png');
+    background-size: cover;
+}
+.images:nth-child(3) {
+    background-image: url('./assets/image-2.png');
+    background-size: cover;
+}
+
+.images:nth-child(4) {
+    background-image: url('./assets/image-1.png');
+    background-size: cover;
+}
+
+.footer{
+    display: flex;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 25px;
+    align-items: flex-end;
+}
+.footer p{
+    margin-left: 10rem;
+}
+
+
+/* Contact Page */
+
+
+.contact-wrapper-body{
+    display:flex;
+    flex-direction: column;
+    row-gap: 10vw;;
+}
+
+.contact-body{
+    /* height: 2rem; */
+    background-color: var(--primary);
+}
+
+
+.contact-description p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact-body {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us, .contact-number{
+    text-align: center;
+}
+
+/*             About Page  */
+.about-body{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+}
+
+.about-description{
+    padding: 5rem 0;
+    width: 40rem;
+
+}
+
+
+.about-wrapper-body{
+    display:flex;
+    flex-direction: column;
+    row-gap: 12vw;
+}
+
+.quote{
+    display: flex;
+    justify-content: flex-end;
 }
